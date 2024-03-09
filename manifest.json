@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "ADblocker",
+    "version": "1.0",
+    "description": "Block annoying ads on websites",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "tabs",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        },
+        "default_popup": "popup.html"
+    }
+}
