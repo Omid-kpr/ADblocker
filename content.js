@@ -1,5 +1,3 @@
-// content.js
-
 // Function to remove ads
 function removeAds() {
     // Select and remove ad elements
